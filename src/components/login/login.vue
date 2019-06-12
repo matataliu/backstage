@@ -37,7 +37,9 @@ export default {
             } = res.data
 
             if(status===200){
+              //保存token值
                 localStorage.setItem('token',data.token)
+              //登陆成功跳转页面
                 this.$router.push({name:'home'})
                 this.$message.success(msg);
             }else{
@@ -49,7 +51,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 
 .login{
     height: 100%;
